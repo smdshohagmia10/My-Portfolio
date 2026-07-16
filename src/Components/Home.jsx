@@ -26,7 +26,7 @@ const HomePage = () => {
         <section className="space-y-7 order-2 md:order-1">
           
           <div className="inline-flex items-center px-4 py-1.5 rounded-full border border-purple-500/30 bg-purple-500/10 text-xs tracking-[3px] uppercase text-purple-300">
-            Welcome to my portfolio
+            Welcome to my portfolio..
           </div>
 
           <div className="space-y-3">
