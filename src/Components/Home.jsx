@@ -10,7 +10,7 @@ const profileData = {
   description:
     'Crafting high-performance, visually stunning web experiences. I turn complex problems into elegant, user-centric digital solutions.',
 
-  image: '/sohag.png',   // ← dot আছে, simple নাম
+  image: '/Sohag1111.jpg',  
 
   github: 'https://github.com/smdshohagmia10',
   linkedin: 'https://www.linkedin.com/in/sohag-dev',
@@ -19,7 +19,7 @@ const profileData = {
 
 const HomePage = () => {
   return (
-    <main className="min-h-screen bg-[#14071f] text-white flex items-center justify-center px-6 py-10 font-sans overflow-hidden">
+    <main id='home' className="min-h-screen bg-[#14071f] text-white flex items-center justify-center px-6 py-10 font-sans overflow-hidden">
       <div className="max-w-7xl w-full grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
         
         {/* LEFT CONTENT */}
