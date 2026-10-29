@@ -14,7 +14,7 @@ const profileData = {
 
   github: 'https://github.com/smdshohagmia10',
   linkedin: 'https://www.linkedin.com/in/sohag-dev',
-  resume: '/resume.pdf',
+  resume: '/Sohag%20Resume.pdf',
 };
 
 const HomePage = () => {
