@@ -82,8 +82,13 @@ const Projects = () => {
     : PROJECTS.slice(0, INITIAL_VISIBLE);
 
   return (
-    <section id="projects" className="mx-auto max-w-7xl px-6 py-24">
-      <h2 className="text-4xl font-extrabold uppercase md:text-6xl">
+    <section
+      id="projects"
+      className="bg-black px-6 py-24 text-white"
+      style={{ fontFamily: "var(--font-geist-sans)" }}
+    >
+      <div className="mx-auto max-w-7xl">
+      <h2 className="text-4xl font-extrabold uppercase tracking-tight md:text-6xl">
         <span className="text-white">Featured </span>
         <span className="bg-gradient-to-r from-purple-500 to-fuchsia-500 bg-clip-text text-transparent">
           Projects
@@ -95,7 +100,7 @@ const Projects = () => {
         {visibleProjects.map((project) => (
           <article
             key={project.id}
-            className="group flex h-full flex-col overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-white/[0.06] to-white/[0.02] shadow-lg shadow-black/20 transition duration-300 hover:-translate-y-1.5 hover:border-purple-400/40 hover:shadow-xl hover:shadow-purple-950/30"
+            className="group flex h-full flex-col overflow-hidden rounded-2xl border border-purple-300/10 bg-[#0d0710] shadow-lg shadow-black/20 transition duration-300 hover:-translate-y-1.5 hover:border-purple-400/40 hover:shadow-xl hover:shadow-purple-950/30"
           >
             <div className="relative aspect-[16/10] w-full overflow-hidden bg-[#17121d]">
               <img
@@ -115,17 +120,17 @@ const Projects = () => {
             </div>
 
             <div className="flex flex-1 flex-col p-5 sm:p-6">
-              <h3 className="text-xl font-bold tracking-tight text-white transition-colors group-hover:text-purple-200">
+              <h3 className="text-xl font-semibold leading-tight tracking-[-0.025em] text-white transition-colors group-hover:text-purple-200">
                 {project.name}
               </h3>
-              <p className="mt-2 line-clamp-2 min-h-10 text-sm leading-5 text-gray-400">
+              <p className="mt-2 line-clamp-2 min-h-12 text-[0.925rem] leading-6 text-gray-300/75">
                 {project.description}
               </p>
               <div className="mt-5 flex flex-wrap gap-2">
                 {project.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="rounded-full border border-purple-300/15 bg-purple-400/[0.08] px-3 py-1 text-xs font-medium text-purple-200/90"
+                    className="rounded-full border border-purple-300/15 bg-purple-400/[0.08] px-3 py-1 text-xs font-medium tracking-wide text-purple-200/90"
                   >
                     {tag}
                   </span>
@@ -138,7 +143,7 @@ const Projects = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={`View ${project.name} live demo`}
-                  className="inline-flex min-h-10 flex-1 items-center justify-center gap-2 rounded-lg bg-purple-500 px-4 py-2 text-sm font-semibold text-white transition hover:bg-purple-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple-300"
+                  className="inline-flex min-h-10 flex-1 items-center justify-center gap-2 rounded-lg bg-purple-500 px-4 py-2 text-sm font-semibold tracking-wide text-white transition hover:bg-purple-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple-300"
                 >
                   Live Demo
                   <ArrowUpRight size={16} aria-hidden="true" />
@@ -149,7 +154,7 @@ const Projects = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={`View ${project.name} on GitHub`}
-                    className="inline-flex min-h-10 items-center justify-center gap-2 rounded-lg border border-white/10 px-4 py-2 text-sm font-semibold text-gray-300 transition hover:border-white/25 hover:bg-white/[0.06] hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple-300"
+                    className="inline-flex min-h-10 items-center justify-center gap-2 rounded-lg border border-white/10 px-4 py-2 text-sm font-semibold tracking-wide text-gray-300 transition hover:border-white/25 hover:bg-white/[0.06] hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple-300"
                   >
                     <FaGithub size={16} aria-hidden="true" />
                     <span>GitHub</span>
@@ -173,6 +178,7 @@ const Projects = () => {
           </button>
         </div>
       )}
+      </div>
     </section>
   );
 };
